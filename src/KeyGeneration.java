@@ -33,17 +33,18 @@ public class KeyGeneration {
         int[] resultLSLeft = Permutation.Permute(LSRule, LSLeft);
         int[] resultLSRight = Permutation.Permute(LSRule, LSRight);
         
-        int[] output = new int[10];
-        int oindex = 0;
+        int[] output = utils.concat(resultLSLeft, resultLSRight);
+        // int[] output = new int[10];
+        // int oindex = 0;
     
-        for (int index = 0; index < resultLSLeft.length; index++) {
-            output[oindex] = resultLSLeft[index];
-            oindex++;
-        }
-        for (int index = 0; index < resultLSRight.length; index++) {
-            output[oindex] = resultLSRight[index];
-            oindex++;
-        }
+        // for (int index = 0; index < resultLSLeft.length; index++) {
+        //     output[oindex] = resultLSLeft[index];
+        //     oindex++;
+        // }
+        // for (int index = 0; index < resultLSRight.length; index++) {
+        //     output[oindex] = resultLSRight[index];
+        //     oindex++;
+        // }
     
         return output;
     }

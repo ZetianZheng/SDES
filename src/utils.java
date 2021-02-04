@@ -1,6 +1,3 @@
-import java.util.Arrays;
-import java.util.regex.Pattern;
-
 public class utils {
     public static int[] String2Array(String S) {
         int[] output = new int[S.length()];
@@ -14,12 +11,12 @@ public class utils {
     }
 
     public static String array2String(int[] args) {
-        String S = Arrays.toString(args);
-        String regEx = "[,\\[\\]]";
-        String output = Pattern.compile(regEx).matcher(S).replaceAll("").trim();
-        output = output.replaceAll("", " ");
+        StringBuilder output = new StringBuilder();
+        for (int i : args) {
+            output.append(i);
+        }
         
-        return output;
+        return output.toString();
     }
 
     public static int[] concat(int[] A, int[] B) {

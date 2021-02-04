@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class App {
     // read input from input.csv and write results to a new csv file.
+    // verifiedInput.csv and verifiedOutput.csv include some examples with SDES cipher text from internet
     public static void main(String[] args) throws Exception {
         File csv = new File("src/data/output.csv");
         if (csv.exists()) { // delete if a output.csv already existed
