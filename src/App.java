@@ -18,7 +18,7 @@ public class App {
         try {
             BufferedReader reader = new BufferedReader(new FileReader("src/data/input.csv"));
             BufferedWriter bw = new BufferedWriter(new FileWriter(csv, true)); 
-            bw.write("Key"+","+"Plaintext"+","+"output"); // the csv file generate at this line
+            bw.write("Key"+","+"Plaintext"+","+"SDES output"); // the csv file generate at this line
             reader.readLine();
             String line = null;
             
