@@ -40,13 +40,11 @@ public class App {
             }
 
             reader.close();
-            bw.flush(); // 这里才把所有的数据写入
+            bw.flush();
             bw.close();
         } catch (FileNotFoundException e) { 
-            // File对象的创建过程中的异常捕获
             e.printStackTrace(); 
           } catch (IOException e) { 
-            // BufferedWriter在关闭对象捕捉异常
             e.printStackTrace(); 
           } catch (Exception e) { 
             e.printStackTrace(); 

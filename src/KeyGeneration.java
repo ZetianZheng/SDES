@@ -7,20 +7,13 @@ public class KeyGeneration {
     public static final int[] LS2 = new int[]{3, 4, 5, 1, 2};
 
     public Key keyGeneration (int[] orgKey) {
-        int[] resultP10 = new int[10];
-        int[] resultLS1 = new int[10];
-        int[] resultLS2 = new int[10];
-        int[] k1 = new int[8];
-        int[] k2 = new int[8];
+        int[] resultP10 = Permutation.Permute(P10, orgKey);
         
+        int[] resultLS1 = LSHelper(LS1, resultP10);
+        int[] resultLS2 = LSHelper(LS2, resultLS1);     
         
-        resultP10 = Permutation.Permute(P10, orgKey); // static function call
-        
-        resultLS1 = LSHelper(LS1, resultP10);
-        resultLS2 = LSHelper(LS2, resultLS1);     
-        
-        k1 = Permutation.Permute(P8, resultLS1);
-        k2 = Permutation.Permute(P8, resultLS2);
+        int[] k1 = Permutation.Permute(P8, resultLS1);
+        int[] k2 = Permutation.Permute(P8, resultLS2);
      
         Key key = new Key(k1, k2);
         
@@ -34,17 +27,6 @@ public class KeyGeneration {
         int[] resultLSRight = Permutation.Permute(LSRule, LSRight);
         
         int[] output = utils.concat(resultLSLeft, resultLSRight);
-        // int[] output = new int[10];
-        // int oindex = 0;
-    
-        // for (int index = 0; index < resultLSLeft.length; index++) {
-        //     output[oindex] = resultLSLeft[index];
-        //     oindex++;
-        // }
-        // for (int index = 0; index < resultLSRight.length; index++) {
-        //     output[oindex] = resultLSRight[index];
-        //     oindex++;
-        // }
     
         return output;
     }

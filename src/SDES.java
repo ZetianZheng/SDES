@@ -9,7 +9,6 @@ public class SDES {
         
         Encryption encrypt = new Encryption();
         int[] cipherText = encrypt.encryption(plainText, key);
-        // System.out.println("CipherText" + Arrays.toString(cipherText));
 
         return cipherText;
     }

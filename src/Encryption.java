@@ -21,12 +21,12 @@ public class Encryption {
 
         int[] resultIP = initialPermutation(plainText);
 
-        int[] resultIPLeft = Arrays.copyOfRange(resultIP, 0, 4); // 0011
-        int[] resultIPRight = Arrays.copyOfRange(resultIP, 4, 8); // 0011
+        int[] resultIPLeft = Arrays.copyOfRange(resultIP, 0, 4); 
+        int[] resultIPRight = Arrays.copyOfRange(resultIP, 4, 8); 
 
         FFunction ff = new FFunction();
-        int[] resultF1 = ff.fFunction(resultIPLeft, resultIPRight, k1); // 1011
-        int[] resultF2 = ff.fFunction(resultIPRight, resultF1, k2); // 0011
+        int[] resultF1 = ff.fFunction(resultIPLeft, resultIPRight, k1); 
+        int[] resultF2 = ff.fFunction(resultIPRight, resultF1, k2);
 
         int[] resultF = utils.concat(resultF2, resultF1);
         int[] cipherText = finalPermutation(resultF);
