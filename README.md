@@ -1,7 +1,8 @@
 ## Getting Started
 
-modify or add a new line in the input.csv with format "Key, PlainText", and run the code
-the result of SDES will be saved in the file: output.csv.
+Modify or add a new line in the input.csv with format "Key, PlainText", and run the code.
+
+The result of SDES will be saved in the file: output.csv.
 
 ## Folder Structure
 ### encryption implements
