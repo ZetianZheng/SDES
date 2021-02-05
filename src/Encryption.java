@@ -14,7 +14,7 @@ public class Encryption {
     // Switch resultF1 and right side of resultIP
     // Do f function again to resultF1 get resultF2
     // Do final permutation of concat of resultF2 + resultF1
-    // Get  CT = BA
+    // Get  CT
     public int[] encryption(int[] plainText, Key key) {
         int[] k1 = key.k1;
         int[] k2 = key.k2;
