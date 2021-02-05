@@ -35,7 +35,6 @@ public class CsvDataEncrypt {
 
                 String CTString = utils.array2String(CT);
                 System.out.println(CTString);
-                System.out.println("Encyption done!");
 
                 bw.newLine();
                 bw.write(dataKey + "," + dataPT + "," + CTString);
