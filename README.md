@@ -18,3 +18,7 @@ The result of SDES will be saved in the file: output.csv.
 ### other tools:
 - utils.java: include some tools: convert between String and array, concat arrays, XOR operation, Decimal to Binary
 - Permutation.java: do all permutate operation in SDES exclude S-Box operate
+
+### 2021-3-6: add CBC and CTR mode
+- CBC.java: ![CBC](./img/CBC.png)
+- CTR.java: ![CTR](./img/CTR.png)

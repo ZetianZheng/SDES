@@ -75,4 +75,21 @@ public class utils {
 
         return result;
     }
+    // ---------------------- getCurrPT, writeCurrCT: Using for CBC or CTR mode ---------------------------
+    public static int[] getCurrPT(int[] pt, int currblock) {
+        int[] ret = new int[8];
+        for (int i = 0; i < 8; i++) {
+            int index = i + currblock * 8;
+            ret[i] = pt[index];
+        }
+
+        return ret;
+    }
+
+    public static void writeCurrCT(int[] ct, int[] currCT, int currblock) {
+        for (int i = 0; i < 8; i++) {
+            int index = i + currblock * 8;
+            ct[index] = currCT[i];
+        }
+    }
 }
